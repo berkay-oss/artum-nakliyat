@@ -1,10 +1,7 @@
 export const domain = "https://artumnakliyat.com";
-export const phone1 = "+905421492867";
-export const phone1Display = "0542 149 28 67";
-export const phone1Whatsapp = "905421492867";
-export const phone2 = "+905307926734";
-export const phone2Display = "0530 792 67 34";
-export const phone2Whatsapp = "905307926734";
+export const phone = "+905307926734";
+export const phoneDisplay = "0530 792 67 34";
+export const whatsapp = "905307926734";
 export const email = "berkay@artumnakliyat.com";
 export const instagramUser = "artumnakliyat";
 export const instagramUrl = "https://www.instagram.com/artumnakliyat";
