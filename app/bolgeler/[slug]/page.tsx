@@ -1,0 +1,8 @@
+
+import { regions } from '@/data/locations'
+import { phone } from '@/data/config'
+
+function slugify(s:string){ return s.toLocaleLowerCase('tr-TR').replaceAll('ı','i').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ö/g,'o').replace(/ç/g,'c').replace(/\s+/g,'-') }
+export function generateStaticParams(){ return Object.keys(regions).map(r=>({slug:`${slugify(r)}-nakliyat`}))}
+export function generateMetadata({params}:{params:{slug:string}}){ const region = Object.keys(regions).find(r=>`${slugify(r)}-nakliyat`===params.slug) || 'Türkiye'; return {title:`${region} Nakliyat | Artum Nakliyat`, description:`${region} bölgesinde evden eve, asansörlü ve şehirler arası nakliyat hizmetleri.`}}
+export default function Page({params}:{params:{slug:string}}){ const region = Object.keys(regions).find(r=>`${slugify(r)}-nakliyat`===params.slug); const cities = region ? regions[region as keyof typeof regions] : []; return <section className="section"><div className="container"><span className="badge">Bölgesel Hizmet</span><h1>{region} Bölgesi Nakliyat</h1><p className="lead">{region} bölgesinde şehir içi ve şehirler arası profesyonel taşıma.</p><div className="area-list">{cities.map(c=><a href={`/iller/${slugify(c)}-evden-eve-nakliyat`} key={c}>{c} Nakliyat</a>)}</div><div className="btns"><a className="btn primary" href={`tel:+90${phone}`}>Hemen Ara</a></div></div></section>}
