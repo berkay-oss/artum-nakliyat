@@ -16,3 +16,4 @@ Premium kurumsal nakliyat sitesi.
 3. Deploy.
 4. Vercel Domains kısmından artumnakliyat.com ekle.
 5. Squarespace DNS kayıtlarını Vercel'in verdiği değerlere göre güncelle.
+
