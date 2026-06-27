@@ -16,3 +16,10 @@
 
 ## Yayına Alma
 ZIP'i çıkar, içindeki tüm dosya ve klasörleri GitHub reposuna yükle ve Commit changes de. Vercel otomatik yayına alır.
+
+
+## Google Analytics
+GA4 Measurement ID eklendi:
+G-32CXT61NQN
+
+Vercel deploy sonrası Analytics verileri genellikle 30 dakika - 24 saat içinde görünmeye başlar.

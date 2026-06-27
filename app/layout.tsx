@@ -1,4 +1,5 @@
 import './globals.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { phone, phoneDisplay, whatsapp, email, instagramUser, instagramUrl } from '@/data/config'
 
@@ -32,5 +33,6 @@ return <html lang="tr"><body>
 <section className="contact-strip"><div className="container contact-grid"><div className="contact-box">☎ <b>Telefon</b><br/><a href={`tel:${phone}`}>{phoneDisplay}</a></div><div className="contact-box">💬 <b>WhatsApp</b><br/><a href={`https://wa.me/${whatsapp}`}>{phoneDisplay}</a></div><div className="contact-box">✉ <b>E-Posta</b><br/><a href={`mailto:${email}`}>{email}</a></div><div className="contact-box">📸 <b>Instagram</b><br/><a href={instagramUrl}>@{instagramUser}</a></div></div></section>
 <footer className="footer"><div className="container footergrid"><div><img src="/logo.png" alt="Artum Nakliyat"/><p>Artum Nakliyat, Türkiye'nin 81 ilinde güvenilir, hızlı ve sigortalı nakliyat hizmetleri sunar.</p></div><div><b>Hızlı Linkler</b><p><a href="/kurumsal">Hakkımızda</a><br/><a href="/hizmetler">Hizmetlerimiz</a><br/><a href="/hizmet-bolgeleri">Şehirlerimiz</a><br/><a href="/iletisim">İletişim</a></p></div><div><b>Hizmetlerimiz</b><p>Evden Eve Nakliyat<br/>Asansörlü Nakliyat<br/>Ofis Taşıma<br/>Paketleme<br/>Eşya Depolama</p></div><div><b>Sosyal Medya</b><p><a href={instagramUrl}>Instagram: @{instagramUser}</a></p><p className="small">© 2026 Artum Nakliyat. Tüm hakları saklıdır.</p></div></div></footer>
 <div className="sticky-actions"><a className="phone" href={`tel:${phone}`}>☎</a><a className="wa" href={`https://wa.me/${whatsapp}`}>☘</a><a className="ig" href={instagramUrl}>◎</a></div>
+<GoogleAnalytics gaId="G-32CXT61NQN" />
 </body></html>
 }
