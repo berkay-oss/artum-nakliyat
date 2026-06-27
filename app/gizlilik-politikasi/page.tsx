@@ -1,0 +1,2 @@
+export const metadata = { title:'Gizlilik Politikası', description:'Artum Nakliyat gizlilik politikası.' }
+export default function Page(){return <section className="section light"><div className="container"><h1>Gizlilik Politikası</h1><p>Kişisel bilgileriniz yalnızca iletişim ve hizmet planlama amacıyla kullanılır. Üçüncü kişilerle izinsiz paylaşılmaz.</p></div></section>}

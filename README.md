@@ -1,19 +1,20 @@
-# Artum Nakliyat Premium Next.js
+# Artum Nakliyat Son Sürüm
 
-Premium kurumsal nakliyat sitesi.
+## İletişim
+- Ana Hat: 0542 149 28 67
+- İkinci Hat: 0530 792 67 34
+- WhatsApp: 0542 149 28 67
+- E-posta: berkay@artumnakliyat.com
+- Instagram: @artumnakliyat
 
-## İçerik
-- 81 il SEO sayfası
-- 7 bölge sayfası
-- Hizmetler sayfası
-- Sitemap / robots
-- Telefon ve WhatsApp odaklı iletişim
-- Vercel uyumlu Next.js proje yapısı
+## Yayına Alma
+1. ZIP'i çıkar.
+2. GitHub reposunda eski dosyaları sil veya üzerine yükle.
+3. Tüm dosya ve klasörleri GitHub'a yükle.
+4. Commit changes.
+5. Vercel otomatik olarak yayına alır.
 
-## Yayınlama
-1. Dosyaları GitHub reposuna yükle.
-2. Vercel.com > New Project > GitHub reposunu seç.
-3. Deploy.
-4. Vercel Domains kısmından artumnakliyat.com ekle.
-5. Squarespace DNS kayıtlarını Vercel'in verdiği değerlere göre güncelle.
-
+## Önemli
+Telefon linkleri doğru formatta ayarlandı:
+- tel:+905421492867
+- tel:+905307926734

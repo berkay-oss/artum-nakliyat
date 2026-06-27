@@ -1,5 +1,4 @@
-
-import { phone } from '@/data/config'
-export const metadata = { title:'Nakliyat Hizmetleri', description:'Evden eve, şehirler arası, asansörlü, ofis taşıma ve ambalajlama hizmetleri.' }
-const services = ['Evden Eve Nakliyat','Şehirler Arası Nakliyat','Asansörlü Nakliyat','Ofis Taşıma','Parça Eşya Taşıma','Profesyonel Ambalajlama','Sigortalı Nakliyat','Kurumsal Taşımacılık','Eşya Depolama']
-export default function Page(){return <section className="section"><div className="container"><h1>Profesyonel Nakliyat Hizmetleri</h1><p className="lead">Artum Nakliyat, taşınma sürecinizi güvenli ve planlı şekilde yönetir.</p><div className="grid">{services.map(s=><div className="card" key={s}><h3>{s}</h3><p className="muted">{s} için profesyonel ekip, doğru ambalajlama ve güvenilir teslimat.</p><a className="btn secondary" href={`tel:+90${phone}`}>Bilgi Al</a></div>)}</div></div></section>}
+import { phone1 } from '@/data/config'
+export const metadata = { title:'Hizmetlerimiz', description:'Evden eve, şehirler arası, asansörlü, ofis taşıma, paketleme ve depolama hizmetleri.' }
+const services = ['Evden Eve Nakliyat','Şehirler Arası Nakliyat','Asansörlü Nakliyat','Ofis ve İşyeri Taşıma','Parça Eşya Taşıma','Sigortalı Taşıma','Paketleme Hizmeti','Eşya Depolama']
+export default function Page(){return <section className="section light"><div className="container"><div className="section-title"><div className="kicker">Hizmetlerimiz</div><h1>Profesyonel Nakliyat Çözümleri</h1><p className="muted">Türkiye geneli güvenilir ve planlı taşıma hizmetleri.</p></div><div className="grid">{services.map(s=><div className="card" key={s}><h3>{s}</h3><p className="muted">{s} alanında deneyimli ekip, doğru planlama ve güvenli teslimat anlayışıyla hizmet sunuyoruz.</p><a className="btn primary" href={`tel:${phone1}`}>Bilgi Al</a></div>)}</div></div></section>}

@@ -1,1 +1,2 @@
-const nextConfig={images:{unoptimized:true}};export default nextConfig;
+const nextConfig={images:{unoptimized:true}};
+export default nextConfig;

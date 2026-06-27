@@ -1,0 +1,2 @@
+export const metadata = { title:'KVKK Aydınlatma Metni', description:'Artum Nakliyat KVKK aydınlatma metni.' }
+export default function Page(){return <section className="section light"><div className="container"><h1>KVKK Aydınlatma Metni</h1><p>Artum Nakliyat, kişisel verilerin korunması konusunda gerekli teknik ve idari tedbirleri alır.</p></div></section>}

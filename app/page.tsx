@@ -1,27 +1,29 @@
-
 import { regions } from '@/data/locations'
-import { phone, phoneDisplay } from '@/data/config'
+import { phone1, phone1Display, phone2, phone2Display, phone1Whatsapp, instagramUrl } from '@/data/config'
 import { slugify } from '@/lib/slug'
 
-const services = ['Evden Eve Nakliyat','Şehirler Arası Nakliyat','Asansörlü Nakliyat','Ofis Taşıma','Parça Eşya Taşıma','Profesyonel Ambalajlama']
-const bigCities = ['İstanbul','Ankara','İzmir','Bursa','Antalya','Kocaeli','Samsun','Trabzon','Zonguldak','Gaziantep','Adana','Konya']
+const services = [
+ ['Evden Eve Nakliyat','Eşyalarınızı özenle paketliyor, güvenle yeni adresinize taşıyoruz.','🏠'],
+ ['Asansörlü Nakliyat','Yüksek katlarda güvenli ve hızlı taşıma işlemi gerçekleştiriyoruz.','🏗️'],
+ ['Ofis & İşyeri Taşıma','İş akışınızı aksatmadan planlı ofis taşıma hizmeti sunuyoruz.','🏢'],
+ ['Paketleme Hizmeti','Eşyalarınızı profesyonel malzemelerle koruma altına alıyoruz.','📦'],
+ ['Eşya Depolama','Eşyalarınızı güvenli depolama alanlarında saklıyoruz.','🔒'],
+ ['Şehirler Arası Nakliyat','Türkiye genelinde planlı ve güvenilir taşımacılık sağlıyoruz.','🚚'],
+]
+const bigCities = ['İstanbul','Ankara','İzmir','Bursa','Antalya','Kocaeli','Sakarya','Konya','Adana','Gaziantep','Samsun','Trabzon','Zonguldak','Eskişehir','Kayseri']
+const testimonials = [
+ ['Ahmet Yılmaz','İstanbul','Evimizi sorunsuz taşıdılar. Ekip çok profesyoneldi, tüm eşyalar sağlam ulaştı.'],
+ ['Merve Demir','Ankara','Asansörlü taşıma hizmeti aldık. Zamanında geldiler, hızlı ve güvenli taşıma oldu.'],
+ ['Mehmet Kaya','İzmir','Ofis taşıma işimizi kusursuz yaptılar. Planlı ve düzenli çalışmaları sayesinde hiç aksaklık yaşamadık.']
+]
 
 export default function Home(){
-return <>
-<header className="hero"><div className="container hero-grid"><div><span className="badge">🚚 81 İl • Premium Taşımacılık</span><h1>Türkiye'nin her yerine güvenle taşıyoruz.</h1><p className="lead">Artum Nakliyat; evden eve, şehirler arası, asansörlü ve sigortalı nakliyatta profesyonel ekip, hızlı planlama ve güçlü iletişim sunar.</p><div className="btns"><a className="btn primary" href={`tel:+90${phone}`}>📞 {phoneDisplay}</a><a className="btn secondary" href={`https://wa.me/90${phone}`}>WhatsApp ile Yaz</a></div></div><div className="truck-stage"><div className="truck-art">ARTUM<br/>NAKLİYAT<small>Kurumsal • Hızlı • Güvenilir</small></div></div></div></header>
-
-<section className="section"><div className="container"><h2>Hizmetlerimiz</h2><p className="muted">Taşınma sürecini baştan sona planlıyoruz.</p><div className="grid">{services.map((s,i)=><a className="card" href="/hizmetler" key={s}><div className="icon">{['🏠','🚚','🏗️','🏢','📦','🛡️'][i]}</div><h3>{s}</h3><p className="muted">Türkiye geneli profesyonel {s.toLowerCase()} hizmeti.</p></a>)}</div></div></section>
-
-<section className="section" id="harita"><div className="container"><h2>81 İlde Hizmet</h2><p className="muted">Karadeniz ve büyük şehirler başta olmak üzere Türkiye'nin tamamına nakliyat çözümleri.</p><div className="map"><h3>Popüler Hizmet Şehirleri</h3><div className="city-cloud">{bigCities.map(c=><a className="chip" key={c} href={`/iller/${slugify(c)}-evden-eve-nakliyat`}>{c} Nakliyat ✅</a>)}</div></div></div></section>
-
-<section className="section"><div className="container"><h2>Yapay Zekâ Destekli Yönlendirme</h2><div className="ai-box"><p className="muted">Ziyaretçi “İstanbul'dan Trabzon'a taşınacağım” yazdığında ilgili şehir ve hizmet sayfasına yönlendirecek altyapı için hazır tasarım.</p><div className="searchbar"><input placeholder="Örn: İstanbul'dan Trabzon'a taşınacağım" /><button>Ara</button></div></div></div></section>
-
-<section className="section" id="neden"><div className="container"><h2>Neden Artum Nakliyat?</h2><div className="stats"><div className="stat"><b>81</b><span>İle Hizmet</span></div><div className="stat"><b>7/24</b><span>Telefon Desteği</span></div><div className="stat"><b>%100</b><span>Özenli Paketleme</span></div><div className="stat"><b>Hızlı</b><span>Planlama</span></div></div></div></section>
-
-<section className="section"><div className="container"><h2>Galeri</h2><div className="gallery"><div className="ph">Premium Nakliye Aracı</div><div className="ph">Asansörlü Taşıma</div><div className="ph">Profesyonel Paketleme</div></div></div></section>
-
-<section className="section"><div className="container"><h2>Hizmet Bölgeleri</h2><div className="grid">{Object.entries(regions).map(([r,list])=><a className="card" href={`/bolgeler/${slugify(r)}-nakliyat`} key={r}><h3>{r}</h3><p className="muted">{list.length} ilde profesyonel hizmet</p></a>)}</div></div></section>
-
-<section className="section cta" id="iletisim"><div className="container"><h2>Taşınma için hemen arayın</h2><p className="muted">Form yok. En hızlı iletişim telefon ve WhatsApp üzerinden.</p><div className="phone">{phoneDisplay}</div><div className="btns"><a className="btn primary" href={`tel:+90${phone}`}>Hemen Ara</a><a className="btn secondary" href={`https://wa.me/90${phone}`}>WhatsApp</a></div></div></section>
-</>
+ return <>
+  <header className="hero"><div className="container hero-grid"><div><div className="kicker">Profesyonel Nakliyat Hizmeti</div><h1>Eşyalarınız <span>Bizimle</span> Güvende</h1><p className="lead">Artum Nakliyat olarak eşyalarınızı özenle taşıyor, yeni adresinize güvenle ulaştırıyoruz. Türkiye'nin 81 ilinde profesyonel nakliyat hizmeti.</p><div className="actions"><a className="btn primary" href="#hizmetler">Hizmetlerimiz →</a><a className="btn dark" href={`tel:${phone1}`}>☎ {phone1Display}</a><a className="btn dark" href={`tel:${phone2}`}>☎ {phone2Display}</a><a className="btn whatsapp" href={`https://wa.me/${phone1Whatsapp}`}>WhatsApp</a><a className="btn instagram" href={instagramUrl}>Instagram</a></div></div><div className="truck-card"><b>ARTUM<br/>NAKLİYAT</b><small>Eşyalarınız bizimle evde hissedecek.</small></div></div></header>
+  <section className="trust"><div className="container trust-grid"><div className="trust-item">☎ <b>7/24 Destek</b><span>Kesintisiz hizmet</span></div><div className="trust-item">🛡 <b>Sigortalı Taşıma</b><span>%100 güvence</span></div><div className="trust-item">👥 <b>Uzman Ekip</b><span>Deneyimli kadro</span></div><div className="trust-item">⏱ <b>Zamanında Teslimat</b><span>Planlı ve hızlı</span></div></div></section>
+  <section id="hizmetler" className="section light"><div className="container"><div className="section-title"><div className="kicker">Hizmetlerimiz</div><h2>Profesyonel Nakliyat Hizmetleri</h2><p className="muted">Taşınma sürecinizi baştan sona planlıyor, güvenle tamamlıyoruz.</p></div><div className="service-grid">{services.map(([t,d,i])=><a href="/hizmetler" className="card" key={t}><div className="icon">{i}</div><h3>{t}</h3><p className="muted">{d}</p><b style={{color:'#ff6b00'}}>Detaylı Bilgi →</b></a>)}</div></div></section>
+  <section className="section map-section"><div className="container map-grid"><div><div className="kicker">Türkiye'nin Her Yerine</div><h2>81 İlde Hizmet Veriyoruz!</h2><p className="muted">Türkiye'nin dört bir yanına güvenilir ve zamanında nakliyat hizmeti sunuyoruz.</p><div className="actions"><a className="btn primary" href="/hizmet-bolgeleri">Tüm İlleri Görüntüle</a></div></div><div className="mapbox"><div className="city-cloud">{bigCities.map(c=><a className="chip" href={`/iller/${slugify(c)}-evden-eve-nakliyat`} key={c}>📍 {c}</a>)}</div></div></div></section>
+  <section className="section light"><div className="container"><div className="section-title"><div className="kicker">Müşteri Yorumları</div><h2>Müşterilerimiz Bizim İçin Ne Diyor?</h2></div><div className="testimonials">{testimonials.map(([n,c,t])=><div className="card" key={n}><div className="stars">★★★★★</div><p>{t}</p><b>{n}</b><br/><span className="muted">{c}</span></div>)}</div></div></section>
+  <section className="section"><div className="container"><div className="section-title"><div className="kicker">Ücretsiz Planlama</div><h2>Nakliye Fiyat Hesaplama</h2><p className="muted">Kesin fiyat için telefonla iletişim kurulur. Bu alan ziyaretçiyi aramaya yönlendirir.</p></div><div className="form-card"><div className="calc"><input placeholder="Nereden taşınıyorsunuz?"/><input placeholder="Nereye taşınıyorsunuz?"/><select><option>Evden Eve Nakliyat</option><option>Asansörlü Nakliyat</option><option>Ofis Taşıma</option></select></div><div className="actions"><a className="btn primary" href={`tel:${phone1}`}>☎ Telefonla Bilgi Al: {phone1Display}</a><a className="btn dark" href={`tel:${phone2}`}>İkinci Hat: {phone2Display}</a></div></div></div></section>
+ </>
 }
